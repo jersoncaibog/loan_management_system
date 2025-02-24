@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Request</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Loan Request</h1>
+
+      <form class="form-content" id="loanForm">
+        <div class="form-group">
+          <label for="loanAmount">Loan Amount</label>
+          <div class="input-with-prefix">
+            <span class="input-prefix">₱</span>
+            <input
+              type="number"
+              id="loanAmount"
+              name="amount"
+              class="form-control with-prefix"
+              placeholder="Enter amount"
+              min="1000"
+              step="100"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="loanPurpose">Loan Purpose</label>
+          <select id="loanPurpose" name="purpose" class="form-control" required>
+            <option value="">Select purpose</option>
+            <option value="personal">Personal Expenses</option>
+            <option value="business">Business</option>
+            <option value="education">Education</option>
+            <option value="medical">Medical</option>
+            <option value="home">Home Improvement</option>
+            <option value="emergency">Emergency</option>
+            <option value="other">Other (Please specify)</option>
+          </select>
+        </div>
+
+        <div id="otherPurposeGroup" class="form-group hidden">
+          <label for="otherPurpose">Specify Purpose</label>
+          <input
+            type="text"
+            id="otherPurpose"
+            name="otherPurpose"
+            class="form-control"
+            placeholder="Enter your loan purpose"
+          />
+        </div>
+
+        <button type="submit" class="btn">Request Approval</button>
+      </form>
+
+      <a href="/menu.html" class="back-link"> <span>←</span> Back to Menu </a>
+    </div>
+
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

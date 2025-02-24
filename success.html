@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Success</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="success-container">
+        <div class="success-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+
+        <h1 class="success-title" id="successTitle">Transaction Successful!</h1>
+        <p class="success-description" id="successDescription">
+          Your transaction has been processed successfully.
+        </p>
+
+        <div class="transaction-details">
+          <div class="detail-row">
+            <span class="detail-label">Transaction Type</span>
+            <span class="detail-value" id="transactionType">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Amount</span>
+            <span class="detail-value" id="transactionAmount">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Date & Time</span>
+            <span class="detail-value" id="transactionDate">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Reference No.</span>
+            <span class="detail-value" id="referenceNumber">-</span>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <a href="/menu.html" class="btn">Back to Menu</a>
+          <button onclick="window.print()" class="btn btn-secondary">
+            Print Receipt
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

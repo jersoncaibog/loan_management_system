@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Balance Information</h1>
+
+      <div class="balance-grid">
+        <div class="balance-card">
+          <h2>Outstanding Balance</h2>
+          <p class="balance-amount">₱0.00</p>
+          <p class="balance-description">Principal amount to repay</p>
+        </div>
+
+        <div class="balance-card">
+          <h2>Interest Rate</h2>
+          <p class="balance-amount">6%</p>
+          <p class="balance-description">Fixed interest rate</p>
+        </div>
+
+        <div class="balance-card">
+          <h2>Interest Amount</h2>
+          <p class="balance-amount interest-amount">₱0.00</p>
+          <p class="balance-description">Additional amount due to interest</p>
+        </div>
+
+        <div class="balance-card total">
+          <h2>Total Amount Due</h2>
+          <p class="balance-amount total-amount">₱0.00</p>
+          <p class="balance-description">Principal + Interest</p>
+        </div>
+      </div>
+
+      <a href="/payment.html" class="btn">Make Payment</a>
+
+      <a href="/menu.html" class="back-link"> <span>←</span> Back to Menu </a>
+    </div>
+
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

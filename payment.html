@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="never" />
+    <title>Make Payment</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Make a Payment</h1>
+
+      <form class="form-content" id="paymentForm">
+        <div class="balance-card" style="margin-bottom: 1.5rem">
+          <h2>Current Outstanding Balance</h2>
+          <p class="balance-amount">₱25,000.00</p>
+          <p class="balance-description">
+            Amount remaining after your last payment
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentAmount">Payment Amount</label>
+          <div class="input-with-prefix">
+            <span class="input-prefix">₱</span>
+            <input
+              type="number"
+              id="paymentAmount"
+              name="amount"
+              class="form-control with-prefix"
+              placeholder="Enter amount"
+              min="100"
+              step="100"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cardNumber">Card Number</label>
+          <input
+            type="text"
+            id="cardNumber"
+            name="cardNumber"
+            class="form-control"
+            placeholder="1234 5678 9012 3456"
+            maxlength="19"
+            required
+            autocomplete="off"
+          />
+        </div>
+
+        <button type="submit" class="btn">Confirm Payment</button>
+      </form>
+
+      <a href="/balance.html" class="back-link">
+        <span>←</span> Back to Balance
+      </a>
+    </div>
+
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

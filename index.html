@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loan Management</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="login-header">Welcome to Money Lending</h1>
+      <p class="hero-text">Loans and Balance using RFID</p>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="rfidInput">Scan your RFID card</label>
+          <input
+            type="password"
+            id="rfidInput"
+            name="rfid"
+            class="form-control"
+            placeholder="RFID Number"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <button type="submit" class="btn hidden">Login</button>
+      </form>
+    </div>
+
+    <script src="/assets/js/api.js"></script>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
