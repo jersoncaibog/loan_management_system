@@ -251,12 +251,50 @@ function initializeSuccessPage() {
   }
 }
 
+// Registration Form Handler
+async function handleRegister(event) {
+  event.preventDefault();
+  
+  const userData = {
+    rfid_number: document.getElementById('rfidInput').value,
+    full_name: document.getElementById('fullName').value,
+    email: document.getElementById('email').value,
+    phone_number: document.getElementById('phoneNumber').value
+  };
+
+  try {
+    const response = await ApiService.register(userData);
+    if (response.success) {
+      alert('Registration successful! You can now login.');
+      window.location.href = '/index.html';
+    } else {
+      alert(response.message);
+    }
+  } catch (error) {
+    alert('Error during registration. Please try again.');
+  }
+}
+
+function initializeRegisterForm() {
+  const registerForm = document.getElementById('registerForm');
+  if (registerForm) {
+    registerForm.addEventListener('submit', handleRegister);
+    
+    // Auto-focus on RFID input
+    const rfidInput = document.getElementById('rfidInput');
+    if (rfidInput) {
+      rfidInput.focus();
+    }
+  }
+}
+
 // Initialize all functionality when DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
   initializeLoginForm();
   initializeLoanForm();
   initializePaymentForm();
   initializeSuccessPage();
+  initializeRegisterForm();
   
   // Load transaction history if on transactions page
   if (document.getElementById('transactionsTableBody')) {

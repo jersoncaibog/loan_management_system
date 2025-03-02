@@ -362,6 +362,20 @@ h2 {
   background-color: #e2e8f0;
 }
 
+.register-link {
+    display: inline-block;
+    color: #2563eb;
+    text-decoration: none;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+    transition: color 0.2s;
+}
+
+.register-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
 /* Responsive styles */
 @media (max-width: 640px) {
     .container {

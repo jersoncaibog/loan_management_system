@@ -1,9 +1,23 @@
 // Backend API URL (development)
-const API_URL = window.location.hostname === 'localhost' 
-  ? 'http://localhost:3000/api'
-  : 'https://your-production-backend-url.com/api'; // Update this with your production backend URL
+const API_URL = 'http://localhost:3000/api'
 
 class ApiService {
+  static async register(userData) {
+    try {
+      const response = await fetch(`${API_URL}/auth/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+      return await response.json();
+    } catch (error) {
+      console.error('Registration error:', error);
+      throw error;
+    }
+  }
+
   static async login(rfidNumber) {
     try {
       const response = await fetch(`${API_URL}/auth/login`, {
